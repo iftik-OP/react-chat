@@ -7,6 +7,7 @@ import { doc, setDoc } from "firebase/firestore";
 import { useNavigate, Link } from "react-router-dom";
 import background from "../img/background.png";
 
+
 const Register = () => {
   const [err, setErr] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -64,7 +65,7 @@ const Register = () => {
   return (
     <div className="formContainer">
       <div className="formWrapper">
-        <span className="logo">React Chat</span>
+        <span className="logo">Baingan Chat</span>
         <span className="title">Register</span>
         <form onSubmit={handleSubmit}>
           <input required type="text" placeholder="display name" />
@@ -80,10 +81,7 @@ const Register = () => {
           {err && <span>Something went wrong</span>}
         </form>
         <p>
-          You do have an account?{" "}
-          <Link className="link" to="/login">
-            Login
-          </Link>
+          You do have an account? <Link className="link" to="/login">Login</Link>
         </p>
       </div>
       <img className="background" src={background} alt="" />
